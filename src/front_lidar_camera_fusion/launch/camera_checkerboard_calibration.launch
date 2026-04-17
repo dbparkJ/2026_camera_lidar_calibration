@@ -1,0 +1,10 @@
+<launch>
+  <arg name="config_file" default="$(find front_lidar_camera_fusion)/config/front_pipeline.yaml" />
+
+  <node pkg="front_lidar_camera_fusion"
+        type="camera_checkerboard_calibrator.py"
+        name="front_camera_checkerboard_calibrator"
+        output="screen">
+    <rosparam command="load" file="$(arg config_file)" />
+  </node>
+</launch>
