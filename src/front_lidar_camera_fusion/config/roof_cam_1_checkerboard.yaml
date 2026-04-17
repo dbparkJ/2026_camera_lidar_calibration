@@ -1,0 +1,62 @@
+image_width: 1920
+image_height: 1080
+camera_name: roof_cam_1
+distortion_model: plumb_bob
+camera_matrix:
+  rows: 3
+  cols: 3
+  data:
+    - 2408.800299779976
+    - 0.0
+    - 935.1739178161015
+    - 0.0
+    - 2395.7206640306786
+    - 535.1009468417993
+    - 0.0
+    - 0.0
+    - 1.0
+distortion_coefficients:
+  rows: 1
+  cols: 5
+  data:
+    - -1.9076441869570793
+    - 3.0844255207843996
+    - 0.011896541953233435
+    - 0.005455543808153745
+    - 0.0
+rectification_matrix:
+  rows: 3
+  cols: 3
+  data:
+    - 1.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 1.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 1.0
+projection_matrix:
+  rows: 3
+  cols: 4
+  data:
+    - 1763.399971356026
+    - 0.0
+    - 949.3026740433712
+    - 0.0
+    - 0.0
+    - 2133.5413109697465
+    - 540.8553215530204
+    - 0.0
+    - 0.0
+    - 0.0
+    - 1.0
+    - 0.0
+checkerboard:
+  square_size_m: 0.03
+  squares_x: 14
+  squares_y: 10
+  inner_corners_x: 13
+  inner_corners_y: 9
+  accepted_samples: 44
