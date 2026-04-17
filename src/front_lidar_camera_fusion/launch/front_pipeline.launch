@@ -1,0 +1,22 @@
+<launch>
+  <arg name="config_file" default="$(find front_lidar_camera_fusion)/config/front_pipeline.yaml" />
+  <arg name="camera_calibration_file" default="$(find front_lidar_camera_fusion)/config/roof_cam_1_checkerboard.yaml" />
+  <arg name="extrinsic_override_file" default="$(env HOME)/.ros/front_lidar_camera_extrinsic_override.yaml" />
+
+  <node pkg="front_lidar_camera_fusion"
+        type="lidar_colorize_node.py"
+        name="front_lidar_colorize_node"
+        output="screen">
+    <rosparam command="load" file="$(arg config_file)" />
+    <param name="camera_calibration_file" value="$(arg camera_calibration_file)" />
+    <param name="extrinsic_override_file" value="$(arg extrinsic_override_file)" />
+  </node>
+
+  <node pkg="front_lidar_camera_fusion"
+        type="lidar_global_transform_node.py"
+        name="front_lidar_global_transform_node"
+        output="screen">
+    <rosparam command="load" file="$(arg config_file)" />
+    <param name="camera_calibration_file" value="$(arg camera_calibration_file)" />
+  </node>
+</launch>
